@@ -7,33 +7,33 @@
     tools:context=".DrinkActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/beer1_button"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="75dp"
         android:layout_marginBottom="20dp"
         android:text="Beer 0.33l"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/wine_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/beer2_button"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
         android:text="Beer 0.5l"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/shot_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/beer1_button"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/wine_button"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="75dp"
@@ -43,7 +43,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/shot_button"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="20dp"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toTopOf="@+id/map_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/wine_button" />
 
     <Button
         android:id="@+id/map_button"
@@ -69,17 +69,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/beer1_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/circle" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/bac_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.46%"
+        android:text="0.0"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#00FFFFFF"
         android:textColorHint="#00FFFFFF"
@@ -89,5 +89,37 @@
         app:layout_constraintEnd_toEndOf="@+id/stat_button"
         app:layout_constraintStart_toStartOf="@+id/stat_button"
         app:layout_constraintTop_toTopOf="@+id/stat_button" />
+
+    <TextView
+        android:id="@+id/burnedAmount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/map_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/DrinksAmount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have consumed total of 0 units of alcohol"
+        app:layout_constraintBottom_toTopOf="@+id/burnedAmount_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/limitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limit"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/stat_button"
+        app:layout_constraintEnd_toEndOf="@+id/stat_button"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/stat_button"
+        app:layout_constraintTop_toBottomOf="@+id/bac_text"
+        app:layout_constraintVertical_bias="0.441" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
